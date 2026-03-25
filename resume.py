@@ -1,13 +1,13 @@
 import streamlit as st
-from extract import extract_text_from_pdf, extract_text_from_docx
-from skills import extract_skills
-from score import calculate_resume_score
-from contact import extract_email, extract_phone
-from auth import check_login, signup_user
-from database import create_users_table, get_all_users
-from analytics import create_candidate_dataframe, calculate_score_statistics, get_top_candidates
-from ml_model import train_shortlist_model, predict_candidate_status
-from dashboard import create_score_distribution_chart, create_prediction_chart, create_top_skills_chart
+from modules.extract import extract_text_from_pdf, extract_text_from_docx
+from modules.skills import extract_skills
+from modules.score import calculate_resume_score
+from modules.contact import extract_email, extract_phone
+from modules.auth import check_login, signup_user
+from modules.database import create_users_table, get_all_users
+from modules.analytics import create_candidate_dataframe, calculate_score_statistics, get_top_candidates
+from modules.ml_model import train_shortlist_model, predict_candidate_status
+from modules.dashboard import create_score_distribution_chart, create_prediction_chart, create_top_skills_chart
 
 
 st.set_page_config(page_title="Resume Screening System", layout="wide")
