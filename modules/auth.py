@@ -1,4 +1,4 @@
-from database import add_user, check_user, create_users_table
+from modules.database import add_user, check_user, create_users_table
 
 create_users_table()
 
