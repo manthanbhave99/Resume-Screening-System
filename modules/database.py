@@ -1,7 +1,7 @@
 import sqlite3
 
 def create_users_table():
-    conn = sqlite3.connect("users.db")
+    conn = sqlite3.connect("data/users.db")
     cursor = conn.cursor()
 
     cursor.execute("""
@@ -16,7 +16,7 @@ def create_users_table():
     conn.close()
 
 def add_user(username, password):
-    conn = sqlite3.connect("users.db")
+    conn = sqlite3.connect("data/users.db")
     cursor = conn.cursor()
 
     try:
@@ -32,7 +32,7 @@ def add_user(username, password):
         conn.close()
 
 def check_user(username, password):
-    conn = sqlite3.connect("users.db")
+    conn = sqlite3.connect("data/users.db")
     cursor = conn.cursor()
 
     cursor.execute(
@@ -46,7 +46,7 @@ def check_user(username, password):
     return user is not None
 
 def get_all_users():
-    conn = sqlite3.connect("users.db")
+    conn = sqlite3.connect("data/users.db")
     cursor = conn.cursor()
 
     cursor.execute("SELECT username FROM users")
