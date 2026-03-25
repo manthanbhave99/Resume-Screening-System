@@ -1,8 +1,6 @@
 streamlit
 python-docx
 PyPDF2
-numpy
 pandas
-matplotlib(matplotlib.pyplot)
-sklearn
-
+numpy
+scikit-learn
